@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	double total, h, m, s;
+	int hh, mm, ss;
+	printf("Mettre le nbre de seconde \n");
+	scanf_s("%lf" , &total);
+	h = total / 3600;
+	hh = h;
+	m = (h-hh) * 60;
+	mm = m;
+	s = (m - mm) * 60;
+	printf("Cela fait %d heure(s) %d minute(s) et %lf seconde(s)\n" , hh,mm,s);
+
+}

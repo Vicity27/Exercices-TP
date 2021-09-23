@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+    int x = 1;
+    int y ;
+
+    while (x < 10)
+    {
+        printf("%d\n", x);
+        y = 0;
+        while (y < x)
+        {
+            printf("%c", 32);
+            y++;
+
+        }
+
+        x++;
+    }
+}

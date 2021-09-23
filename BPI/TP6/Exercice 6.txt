@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <windows.h>
+
+int main(void) {
+	int a, b,c;
+	c = 0;
+	printf("Combien de temps au chrono (mm:ss) ?");
+	scanf_s("%d %d", &b, &a);
+	for (a > 0 && b > 0; ++c;) {
+		Sleep(1000);
+		--a;
+		if (a == 0 && b != 0) {
+			a = 60;
+			--b;
+		}
+		printf("%d : %d\n", b,a);
+	}
+}

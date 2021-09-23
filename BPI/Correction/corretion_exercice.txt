@@ -1,0 +1,57 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <stdbool.h>
+
+double somme (double t[], size_t longueur);
+double  minimum (double t[], size_t longueur);
+double maximum (double t[], size_t longueur);
+
+int main (void){
+    size_t longueur;
+    scanf("%zd",&longueur);
+    double t[longueur];
+    for (int k = 0; k < longueur;++k){
+        scanf ("%lf", &t[k]);
+    }
+    double n =(somme(t,longueur)- minimum(t,longueur) - maximum(t,longueur))/(longueur -2);
+    printf ("moyenne olympique =%lf", n);
+    
+    return EXIT_SUCCESS;
+}
+
+double somme (double t[], size_t longueur){
+    if (longueur == 0) {
+        exit (EXIT_FAILURE);
+    }
+    double s = 0;
+    for (size_t k = 0; k < longueur; ++k){
+        s += t[k];
+    }
+    return s;
+}
+
+double maximum (double t[], size_t longueur){
+    if (longueur == 0) {
+        exit (EXIT_FAILURE);
+    }
+    double m = t[0];
+    for (size_t k = 1; k < longueur; ++k){
+        if (t[k] > m) {
+            m = t[k];
+        }
+    }
+    return m;
+}
+
+double minimum (double t[], size_t longueur){
+    if (longueur == 0) {
+        exit (EXIT_FAILURE);
+    }
+    double m = t[0];
+    for (size_t k = 1; k < longueur; ++k){
+        if (t[k] < m) {
+            m = t[k];
+        }
+    }
+    return m;
+}

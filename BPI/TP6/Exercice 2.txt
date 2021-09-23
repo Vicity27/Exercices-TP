@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int x, v;
+	
+		if (scanf_s("%d", &x) != 1) {
+		printf("Erreur de saisie\n");
+		return EXIT_FAILURE;
+		
+	}
+	v = 1;
+	for (int k = 1; k <= x; ++k) {
+		v = 2 * v;
+		
+	}
+	printf("%d\n", v);
+	
+		return EXIT_SUCCESS;
+	
+}
+/* v est multiplier par deux tant que k est inferieur au nombre choisi, donc le nombre que l'utilisateur choisi est la puissance de deux.*/

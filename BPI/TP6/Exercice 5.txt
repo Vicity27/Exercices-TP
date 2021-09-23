@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	int n, j;
+	j = 1;
+	printf("entrez une valeur : ");
+	scanf_s("%d", &n);
+
+	for (int i = 1; i < n+1; ++i) {
+		j = i * j;
+	}
+
+	printf("%d", j);
+}
+/* Quand l'utilisateur choisi 12 le resultat est 479 001 600 mais lorsque 13 est choisi le resultat devrais 
+	etre 6 227 020 800 mais ce chiffre est plus grand que la limite de 2 147 483 647 donc le resultat est faux */

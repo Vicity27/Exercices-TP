@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+  int a;
+  
+  printf("Entrez une valeur : \n");
+  if (scanf("%d",&a) !=1) {
+    printf("erreur");
+    exit(EXIT_FAILURE);
+  }
+  printf("le double de %d est %d" ,a,a*2);
+  
+  return EXIT_SUCCESS;
+}

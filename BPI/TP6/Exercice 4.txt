@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+
+	int a, n;
+	a = 0;
+	printf("Choisissez un nombre : ");
+	scanf_s("%d", &n);
+	
+	for (int i = 0; i < n;) {
+		i = i + 2;
+		a = a + i;
+		printf(" %d +", i);
+	}
+	printf(" 0 = %d\n", a);
+}

@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+  int a,b,c;
+
+  printf("Entrez deux valeurs : \n");
+  if (scanf("%d%d%d",&a,&b,&c) !=3){
+    printf("erreur");
+    exit (EXIT_FAILURE);
+  }
+  if (a>=b && a>=c)
+  printf("%d",a);
+  if (b>=c && b>=a)
+  printf("%d",b);
+  if (c>=a && c>=b)
+  printf("%d",c);
+}

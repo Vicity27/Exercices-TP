@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	char a,b;
+	printf("Ecrivez une lettre :");
+	scanf_s("%c", &a);
+	b = a;
+	if (a >= 'a' && a <= 'z') {
+		a = (a - 'a') + 'A';
+		printf("%c", a);
+	}
+	if(b >= 'A' && b <= 'Z') {
+		b = (b - 'A') + 'a';
+		printf("%c", b);
+	}
+	
+}

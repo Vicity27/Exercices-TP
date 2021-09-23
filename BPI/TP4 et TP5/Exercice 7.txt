@@ -1,0 +1,29 @@
+#include <stdlib.h>
+#include <stdio.h>
+
+int main(void) {
+	int  k, j,kk;
+	double p1, p2,p;
+
+	printf("Entrez le prix au kilometre pour chaque tarifs puis le nombre de kilometre parcouru et enfin le nombre de jours\n");
+	scanf_s("%lf%lf%d%d", &p1, &p2, &k, &j);
+
+	if (k/j >= 500) {
+		kk = k - 500;
+		p = p1 * kk + 80*j;
+		
+	}
+	else {
+		p = 80*j;
+	}
+	printf("Pour le tarif 1 le prix est %lf\n", p);
+
+	kk = k - 2000;
+	if (k >= 2000) {
+		p = 2000 * p2 + (kk * p2 -(((kk * p2)/100)*11.5));
+	}
+	else {
+		p = k * p2;
+	}
+	printf("Pour le tarif 2 le prix est %lf\n", p);
+}

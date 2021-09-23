@@ -1,0 +1,15 @@
+#include <stdlib.h>
+#include <stdio.h>
+int main(void)
+{
+  printf("Saisissez deux entiers pour effectuer la division\n");
+  int a=0;
+  int b=0;
+  if (scanf("%d%d",&a,&b) !=2){
+    printf("erreur");
+    exit (EXIT_FAILURE);
+      }
+  printf("%d/%d=",a,b);
+  printf("%d\n",a/b);
+  return EXIT_SUCCESS;
+  }
